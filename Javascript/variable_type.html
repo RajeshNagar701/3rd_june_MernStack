@@ -2,9 +2,22 @@
 
 JavaScript variable
 
-1)Primitive data type  (Numbers,String,float,Boolean)
-2)Non-primitive 	   (reference) data type	
+1)Primitive type  (Numbers,String,float,Boolean)
+2)Non-primitive type	obj / array (reference) data type	
 
+
+
+  
+JavaScript primitive data types
+There are five types of primitive data types in JavaScript. They are as follows:
+
+Data Type	Description
+
+String		represents sequence of characters e.g. "hello"
+Number		represents numeric values e.g. 100
+Boolean		represents boolean value either false or true
+Undefined	represents undefined value
+Null		represents null i.e. no value at all	
 
 var varname=var_value
 
@@ -13,6 +26,7 @@ var b=10.5    	   float/double
 var c='r'     	   char
 var d="Rajesh"     string
 var marrige=true   Boolean
+
 
 data type ( int=10  float=10.5  char='R'  string="string means words" )
 
@@ -86,18 +100,8 @@ You can also declare multiple variables
 
       var money;
       money = 2000.50;
-  
-	  
-JavaScript primitive data types
-There are five types of primitive data types in JavaScript. They are as follows:
 
-Data Type	Description
-
-String		represents sequence of characters e.g. "hello"
-Number		represents numeric values e.g. 100
-Boolean		represents boolean value either false or true
-Undefined	represents undefined value
-Null		represents null i.e. no value at all	
+=======================================================================
 
 =======================================================================
 
@@ -117,25 +121,12 @@ RegExp	represents regular expression
 
 
 <script>
-	
-	// primitive
-	var num=1250;  // int
-	document.write("<h1>"+ num +"</h1>");
-	
-	var point=12.50; // float
-	document.write("<h1>"+ point +"</h1>");
-	
-	var name="kRITI Mishra"; // float
-	document.write("<h1>"+ name +"</h1>");
-	
-	var blank=null;
-	document.write("<h1>"+ blank +"</h1>");
-	
-	
+
 	// non primitive
 	
 	//Array : collections of value 
 				//index 0,1,2,3,4
+				
 	var students=["darshan","Antima","Kriti","Rakesh","Krupali"];
 	
 	document.write("<h1>"+ students +"</h1>");
@@ -143,10 +134,13 @@ RegExp	represents regular expression
 	document.write("<h1>"+ students[4] +"</h1>");
 	
 	
+	//===================================================================
+	
 	// object { propery : value,}
 	
 	// single Object
 	var student1={ name:"Darshan",email:"darashan@gmail.com",pass:"1234",mobile:"12345678" };
+	
 	document.write("<h1>"+ student1.name + student1.email +"</h1>");
 	
 	//arr Object
@@ -159,7 +153,7 @@ RegExp	represents regular expression
 	];
 	*/
 	
-	//document.write("<h1>"+ arr_obj[2].name +"</h1>");
+	//document.write("<h1>"+ arr_obj[1].name +"</h1>");
 	//document.write(`<h1> ${arr_obj[0].email} : ${arr_obj[0].email} </h1>`);
 	 
 </script>
