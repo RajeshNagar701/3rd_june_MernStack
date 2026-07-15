@@ -4,26 +4,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 
-<script>
-	
-	function myfunction()
-	{
-		document.getElementById('test').style.color="red";
-		document.getElementById('test').style.backgroundColor="yellow";
-		document.getElementById('test').style.textTransform="uppercase";
-	}
-</script>
 
 </head>
 
 <body>
 
-<input type="submit" name="submit" value="click here" ondblclick="myfunction()">  <!-- onclick HTML EVENT-->
+<button ondblclick="myfunction()"> Style Manuplation</button> <!-- onclick HTML EVENT-->
 
-<h1 id="test" style="color:blue">This is style given by javascript function</h1>
+<h1 id="test" style="color:blue;background-color:yellow">This is style given by javascript function</h1>
 
 <hr>
 
+<script>
+	
+	function myfunction()
+	{
+		document.getElementById('test').style.color="pink";
+		document.getElementById('test').style.backgroundColor="red";
+		document.getElementById('test').style.textTransform="uppercase";
+		document.getElementById('test').style.textAlign="center";
+	}
+</script>
 
 </body>
 </html>

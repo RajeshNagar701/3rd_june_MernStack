@@ -4,24 +4,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 
-<script>
-
-	function attribute()
-	{                                       // attribute,value
-		document.getElementById('test').setAttribute('style','color:red;background-color:yellow;text-transform:uppercase')
-	}
-	
-</script>
-
 </head>
 
 <body>
 
-<input type="submit" name="submit" value="click here" ondblclick="attribute()">  <!-- onclick HTML EVENT-->
+<button ondblclick="myfunction()"> Style Manuplation</button> <!-- onclick HTML EVENT-->
 
-<h1 id="test" style="color:blue">This is style given by javascript function</h1>
+<h1 id="test" style="color:blue;background-color:yellow">This is style given by javascript function</h1>
 
+<hr>
+<script>
 
+	function myfunction()
+	{                                       // attribute,value
+		document.getElementById('test').setAttribute('style','color:red;background-color:yellow;text-transform:uppercase;text-align:center')
+	}
+	
+</script>
 
 </body>
 </html>
