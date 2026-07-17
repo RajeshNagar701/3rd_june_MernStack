@@ -8,21 +8,18 @@
 <img src="pic_bulboff.gif" id="bulb" height="200px" width="100px" 
 onmouseover="onbulb()" onmouseout="offbulb()">
 
-<input type="submit" value="bulb off" onClick="offbulb()">
-
+<input type="submit" value="bulb Off" onClick="offbulb()">
 <script>
 
 	function onbulb(){
-		
 		var myImg=document.getElementById('bulb');
 		myImg.src="pic_bulbon.gif";
 	}
-	
 	function offbulb(){
-		
 		var myImg=document.getElementById('bulb');
 		myImg.src="pic_bulboff.gif";
 	}
+	
 </script>
 
 </body>
