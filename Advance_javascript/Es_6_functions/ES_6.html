@@ -1,0 +1,122 @@
+<!--
+ECMAScript 2015 was the second major revision to JavaScript.
+
+ECMAScript 2015 is also known as ES6 and ECMAScript 6.
+
+This chapter describes the most important features of ES6.
+
+New Features in ES6
+
+Variable   var 
+
+The let keyword
+The const keyword
+
+Function    normal   
+
+lierals Functions
+Arrow Functions
+construct
+Function 
+
+operators 
+The {a,b} = Operator
+The [a,b] = Operator
+The ... Operator
+
+loop
+
+For of / For In
+Map Objects
+Set Objects
+filter
+foreach
+every
+
+OOPS concept / class / object 
+
+Promises
+Symbol
+Default Parameters
+Function Rest Parameter
+
+array => adv array Functions
+string => adv string Functions
+number function add
+-->
+
+
+<script>
+
+
+
+
+
+/*
+
+Var 
+
+Variables declared with the var always have Global Scope.
+Variables declared with the var keyword can 
+
+NOT have block scope: Function / Global
+Hoisting Behavior  => first declare then use 
+Re-declaration Allowed
+
+
+*/
+
+/*
+Let
+
+The let keyword was introduced in ES6 (2015)
+Variables declared with let have Block Scope  {  }
+Variables declared with let must be Declared before use
+Variables declared with let cannot be Redeclared in the same scope
+*/
+/*
+{
+  let x = 2;   // local 
+  x=4; // re-asigned ok but re declare not possible
+}
+
+// x can NOT be used here
+*/
+
+
+/*
+Const 
+
+Variables defined with const cannot be Redeclared
+
+Variables defined with const cannot be Reassigned
+
+Variables defined with const have Block Scope
+
+*/
+
+const PI = 3.14159265359; // correct
+
+const PI;
+PI = 3.14159265359; // Incorrect
+
+
+
+/*
+
+Feature 		  var   				let					const
+Scope		  Function / Global		  Block level		  Block level
+Hoisting	    Hoisted  			   Hoisted 			   Hoisted 
+Re-declaration  Allowed               Not allowed         Not allowed
+Re-assignment   Allowed                Allowed            Not allowed
+
+let x=20;
+x=40;
+
+*/
+
+
+
+</script>
+
+
