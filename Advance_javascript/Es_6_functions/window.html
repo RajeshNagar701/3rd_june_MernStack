@@ -1,0 +1,94 @@
+
+<!--
+
+JavaScript Window - The Browser Object Model
+
+The Browser Object Model (BOM)
+
+
+Window Size
+
+let w = window.innerWidth;
+let h = window.innerHeight;
+
+Other Window Methods
+
+window.open() - open a new window
+window.close() - close the current window
+window.moveTo() - move the current window
+window.resizeTo() - resize the current window
+
+
+
+
+JavaScript Window Screen
+
+screen.width
+screen.height
+screen.availWidth
+screen.availHeight
+screen.colorDepth
+screen.pixelDepth
+
+
+document.getElementById("demo").innerHTML = "Screen Width: " + screen.width;
+ans=  Screen Width: 1366
+
+
+JavaScript Window Location
+
+window.location.href returns the href (URL) of the current page
+window.location.hostname returns the domain name of the web host
+window.location.pathname returns the path and filename of the current page
+window.location.protocol returns the web protocol used (http: or https:)
+window.location.assign() loads a new document
+
+
+JavaScript Window History
+
+history.back() - same as clicking back in the browser
+history.forward() - same as clicking forward in the browser
+
+
+The Navigator Object
+
+The navigator object contains information about the visitor's browser.
+It can be written with or without the window prefix like:
+windows.navigator or just navigator
+
+navigator.cookieEnabled;
+navigator.language;
+navigator.onLine;
+navigator.appName;
+
+JavaScript Popup Boxes
+
+Alert box
+Confirm box
+Prompt box
+
+
+
+JavaScript Cookies
+document.cookie = "username=John Doe";
+
+-->
+
+<script>
+	const print_me=()=>{
+		window.print(); // page print
+	}
+</script>
+
+	<button onclick="print_me()">Pring whole page</button>
+	
+	<hr>
+
+<script>
+	const redirect_me=()=>{
+		window.location='void.html'; // redirect
+	}
+</script>
+
+	<button onclick="redirect_me()">Redirect page</button>
+	
