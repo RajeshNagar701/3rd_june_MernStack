@@ -1,17 +1,31 @@
 <script>
 
 /*
-write("string")	writes the given string on the doucment.
-writeln("string")	writes the given string on the doucment with newline character at the end.
-getElementById()	returns the element having the given id value.
 
+DOM 
+
+The Document Object Model (DOM) is a programming interface that browser engines use to 
+translate static HTML documents into an interactive, hierarchical tree of objects in system memory.
+
+JavaScript leverages the DOM API to dynamically access, modify, style, or restructure pages in 
+real-time without requiring a full page refresh.
+
+To interact with any part of a webpage, you must first point JavaScript to the correct 
+element node using built-in selection methods.
+
+document.getElementById('id')
+document.querySelector('selector')
+document.querySelectorAll('selector')
+
+
+Example:
 document.getElementById('mylocation').innerHTML=data;
 document.getElementById('myloca').innerText=msg;  
 document.getElementById('myloca').value=msg; 
 
-getElementsByName()	returns all the elements having the given name value.
-getElementsByTagName()	returns all the elements having the given tag name.
-getElementsByClassName()	returns all the elements having the given class name.
+getElementsByName('fname')	returns all the elements having the given name value.
+getElementsByTagName('h1')	returns all the elements having the given tag name.
+getElementsByClassName('bigblue')	returns all the elements having the given class name.
 if(document.myForm1.userPass.value.length>5) // document.forms["myform"]["ufn"].value; 
 
 */
@@ -137,11 +151,27 @@ function byformname()
 	}  
 	*/
 	
-	if(document.forms['myForm1']['userPass'].value.length>5) // if(document.forms["myform"]["ufn"].value>5)
+	var msg; 
+	if(document.forms['myForm1']['userPass'].value.length>12) // if(document.forms["myform"]["ufn"].value>5)
 	{  
-		document.getElementById('myloca').innerText="Good";
+		document.getElementById('myloca').innerText="eXELENCE";
 		document.getElementById('myloca').style.color="green";	
 	}  
+	else if(document.forms['myForm1']['userPass'].value.length>8)
+	{
+		document.getElementById('myloca').innerText="Best";
+		document.getElementById('myloca').style.color="yellow";	
+	}
+	else if(document.forms['myForm1']['userPass'].value.length>5)
+	{
+		document.getElementById('myloca').innerText="good";
+		document.getElementById('myloca').style.color="orange";	
+	}
+	else
+	{
+		document.getElementById('myloca').innerText="Weak";
+		document.getElementById('myloca').style.color="red";	
+	}
 	
 }  
   
