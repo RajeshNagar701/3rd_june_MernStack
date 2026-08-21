@@ -1,7 +1,7 @@
 
 
 <!--
-Axios is an open source library that allows you to make HTTP requests. 
+Axios is an open source library that allows you to make HTTP requests/api. 
 It provides methods that include .get(), .post(), and .delete().
 
 In this article, you will build a JavaScript application that uses Axios to perform GET, 
@@ -64,13 +64,12 @@ POST, and DELETE requests to a server for updates to a list of todo items.
 	 */
 	 
 	 // data get all data
-	 /*
+	 
 	  const fetch=async()=>{
 		const res=await axios.get(`https://jsonplaceholder.typicode.com/posts`);
 		console.log(res.data);
 	  }
-	  fetch();	
-	 */
+	  fetch();
 	 
 	 
 	  
@@ -105,11 +104,9 @@ POST, and DELETE requests to a server for updates to a list of todo items.
 	  /*
 	  
 	  // data insert
-	  var object={id: 103,name:"ram Kumar",email:"ram@gmail.com",password: "1234"}
+	  var post_object={id: 103,name:"ram Kumar",email:"ram@gmail.com",password: "1234"}
 	  const insert=async()=>{
-	  
-		const res=await axios.post(`https://jsonplaceholder.typicode.com/posts/`,object);
-		
+		const res=await axios.post(`https://jsonplaceholder.typicode.com/posts`,post_object);
 		console.log(res.data);
 	  }
 	  
@@ -128,9 +125,9 @@ POST, and DELETE requests to a server for updates to a list of todo items.
 	/*
 	  // data update id data  put/patch 
 	   
-	  var updobject={id: 101,name:"shyamjiKumar",email:"shyamji@gmail.com",password: "abc"}
+	  var upd_object={name:"shyamjiKumar",email:"shyamji@gmail.com",password: "abc"}
 	  const onupdate=async()=>{
-		const res=await axios.put(`https://jsonplaceholder.typicode.com/posts/5`, updobject);
+		const res=await axios.put(`https://jsonplaceholder.typicode.com/posts/5`, upd_object);
 		console.log(res.data);
 	  }
 
@@ -140,13 +137,13 @@ POST, and DELETE requests to a server for updates to a list of todo items.
 	 
 	 // get method
 	 
-	 //axios.get(`api`)    array obj        (res.data)
-	 //axios.get(`api/id`)  single obj
-	// axios.get(`api?country=india`)  array obj
+	 //axios.get(`api`)    				array obj        (res.data)
+	 //axios.get(`api/id`)  			single obj
+	// axios.get(`api?country=india`)   array obj
 
-	// axios.post(`api`,object)  insert
-	// axios.delete(`api/id`)  delete
-	// axios.put(`api/id`,object);
+	// axios.post(`api`,object)         insert
+	// axios.delete(`api/id`)  			delete
+	// axios.put(`api/id`,object);      update
 	
 	
 

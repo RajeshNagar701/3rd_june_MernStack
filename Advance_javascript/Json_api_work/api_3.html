@@ -15,13 +15,13 @@
   </head>
   <body>
     
-    <div class="container mt-5">
-		
-	  <div class="spinner-border text-danger" id="spin"></div>	
+    <div class="container mt-5 text-center">
+	  <div class="spinner-border text-danger mb-5" id="spin"></div>
       <div class="row" id="mydiv">
 		
 	  </div>
     </div>
+	
     <script>
          
       let mydiv = document.getElementById("mydiv");
@@ -30,15 +30,15 @@
 	  {
 		for(const myData of objarr) 
 		{
-		  let htmlData = `<div class="col-md-2">
-			<div class="card">
-			  <img src="${myData.image}" style='height:200px' class="card-img-top" alt="" />
-			  <div class="card-body">
-				<h5 class="card-title">${myData.title}</h5>
-				<h5 class="card-title">${myData.price}</h5>
-			  </div>
-			</div>
-		  </div>`;
+		  let htmlData = `<div class="col-md-3">
+							<div class="card">
+							  <img src="${myData.image}" style='height:200px' class="card-img-top" alt="" />
+							  <div class="card-body">
+								<h5 class="card-title">${myData.title}</h5>
+								<h5 class="card-title">${myData.price}</h5>
+							  </div>
+							</div>
+						  </div>`;
 		  
 		  mydiv.insertAdjacentHTML("afterbegin", htmlData);
 		}

@@ -14,22 +14,23 @@
     />
   </head>
   <body>
-    <button onclick="fetchData()">Fetch Data</button>
+    
 	
-	<div class="container">
-	  <div class="row" id="btn">
+	<div class="container text-center">
+	  <button class="btn btn-primary mt-5 mb-5" onclick="fetchData()">View Product</button>	
+	  <div class="row" id="div">
 	  </div>
 	</div>
     
 	<script>
        
-      let btn = document.getElementById("btn");
+      let div = document.getElementById("div");
 
       function showData(newData) 
 	  {
         for(const myData of newData) 
 		{
-          let htmlData = ` <div class="col-md-3">
+          let htmlData = `<div class="col-md-3">
 			<div class="card">
 			  <img src="${myData.image}" class="card-img-top" style='height:200px' alt="" />
 			  <div class="card-body">
@@ -40,7 +41,7 @@
 			  </div>
 			</div>
 		  </div>`;
-          btn.insertAdjacentHTML("afterbegin", htmlData);
+          div.insertAdjacentHTML("afterbegin", htmlData);
         }
       }
 
