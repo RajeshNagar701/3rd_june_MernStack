@@ -12,7 +12,8 @@ An array is a special variable, which can hold more than one value at a time.
 var car1 = "Saab";
 var car2 = "Volvo";
 var car3 = "BMW";
-
+			
+			0       1      2
 var cars=["Saab","Volvo","BMW"];
 
 Access the Elements of an Array
@@ -29,7 +30,7 @@ document.write(cars);
 <script>
 var person = ["John", "Doe", 46];
 document.write(person[0] + "<br>");
-document.write(person + "<br>");
+
 </script>
 
 <script>
@@ -37,7 +38,7 @@ document.write(person + "<br>");
 	
 	for (i=0;i<emp.length;i++)
 	{  
-	document.write(emp[i] + "<br/>");  
+		document.write(emp[i] + "<br/>");  
 	}  
 	
 	
@@ -65,14 +66,13 @@ document.write(person + "<br>");
         listarr.pop()
         document.write(listarr + '<br>')
         
-		
 		// to add an element from first
         listarr.unshift("karan")
         document.write(listarr + '<br>')
 
         // to remove an element from first
         listarr.shift()
-       document.write(listarr + '<br>')
+        document.write(listarr + '<br>')
 			
 	
     </script>
