@@ -18,9 +18,6 @@ The component also requires a render() method, this method returns HTML.
 
 */
 
-
-
-
 //rce
 /*
 import React, { Component } from 'react'
@@ -32,7 +29,6 @@ export class Class_component extends Component {
     )
   }
 }
-
 export default Class_component
 */
 
