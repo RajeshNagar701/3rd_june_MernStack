@@ -4,6 +4,8 @@ import Css_react from "./css/Css_react";
 import Jsx_comp from "./Jsx/Jsx_comp";
 import About from "./Layout/About";
 import Home from "./Layout/Home";
+import Main_props from "./Props/Main_props";
+import React_bootstrap from "./React_bootstrap/React_bootstrap";
 
 function App() {
   return (
@@ -21,7 +23,13 @@ function App() {
           //<Jsx_comp/>
         
           //4) css in react
-          <Css_react />
+          //<Css_react />
+
+          //5) Props
+          //<Main_props/>
+
+          //6) Readyment component React bootstrap / MUI
+          <React_bootstrap/>  
         }
        
       
