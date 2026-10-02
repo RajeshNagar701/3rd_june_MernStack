@@ -8,7 +8,10 @@ import Module_css from "./Module_css/Module_css";
 import MUI from "./MUI/MUI";
 import Main_props from "./Props/Main_props";
 import React_bootstrap from "./React_bootstrap/React_bootstrap";
+import App_routing from "./Routing_src/App_routing";
 import Sass_css from "./Sass_css/Sass_css";
+import Class_state from "./State/Class_state/Class_state";
+import Func_state from "./State/Func_state/Func_state";
 import Styled_component from "./Styled_component/Styled_component";
 
 function App() {
@@ -38,7 +41,14 @@ function App() {
           //<React_bootstrap/>
           //<MUI/>  
           //<Styled_component/>
-        }
+
+          //7) State  => onject {property:value}
+          //<Class_state/>
+          //<Func_state/>
+
+          //8) Routing
+          <App_routing/>
+       }
        
       
        
