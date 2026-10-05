@@ -13,6 +13,9 @@ import Sass_css from "./Sass_css/Sass_css";
 import Class_state from "./State/Class_state/Class_state";
 import Func_state from "./State/Func_state/Func_state";
 import Styled_component from "./Styled_component/Styled_component";
+import A from "./useContext/A";
+//import A from "./useContext/Props_driling/A";
+
 
 function App() {
   return (
@@ -47,7 +50,11 @@ function App() {
           //<Func_state/>
 
           //8) Routing
-          <App_routing/>
+          //<App_routing/>
+
+          //9) propsDrilling / useContext,createContext
+          //<A/> // A FROM props_driling
+          <A/>   // A FROM useContext
        }
        
       
