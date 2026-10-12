@@ -9,6 +9,12 @@ import Course from "./website/pages/Course";
 import Team from "./website/pages/Team";
 import Testimonial from "./website/pages/Testimonial";
 import Pnf from "./website/pages/Pnf";
+import Aheade from "./admin/components/Aheade";
+import Admin_login from "./admin/pages/Admin_login";
+import Afooter from "./admin/components/Afooter";
+import Dashboard from "./admin/pages/Dashboard";
+import Add_categories from "./admin/pages/Add_categories";
+import Manage_categories from "./admin/pages/Manage_categories";
 
 function App() {
   return (
@@ -22,6 +28,13 @@ function App() {
           <Route path="/team" element={<><Header title="Team"/><Team/><Footer/></>}></Route>
           <Route path="/testimonial" element={<><Header title="Testimonial"/><Testimonial/><Footer/></>}></Route>
           <Route path="*" element={<><Header title="Page Not Found"/><Pnf/><Footer/></>}></Route>
+
+
+          <Route path="/admin-login" element={<><Admin_login/></>}></Route>
+          <Route path="/dashboard" element={<><Aheade title="Dashboard"/><Dashboard/><Afooter/></>}></Route>
+          <Route path="/add_categories" element={<><Aheade title="Add Categories"/><Add_categories/><Afooter/></>}></Route>
+          <Route path="/manage_categories" element={<><Aheade title="Manage Categories"/><Manage_categories/><Afooter/></>}></Route>
+
         </Routes>
        </BrowserRouter>
     </div>

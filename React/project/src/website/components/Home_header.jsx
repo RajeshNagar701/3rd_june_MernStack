@@ -1,17 +1,105 @@
-import React from 'react'
+
 import { Helmet } from 'react-helmet'
 import { NavLink } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+
+
 
 function Home_header() {
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Hide loader after React mounts
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+
+
+        // Initialize Owl Carousel after React renders
+        const $ = window.jQuery;
+        let $carousel;
+
+        if ($ && $.fn.owlCarousel) {
+            $carousel = $('.header-carousel');
+
+            if ($carousel.length && !$carousel.hasClass('owl-loaded')) {
+                $carousel.owlCarousel({
+                    items: 1,
+                    loop: true,
+                    margin: 0,
+                    autoplay: true,
+                    autoplayTimeout: 5000,
+                    autoplayHoverPause: true,
+                    smartSpeed: 1000,
+                    nav: true,
+                    dots: true,
+                    navText: [
+                        '<i class="bi bi-chevron-left"></i>',
+                        '<i class="bi bi-chevron-right"></i>'
+                    ]
+                });
+            }
+        } else {
+            console.error(
+                'jQuery or Owl Carousel failed to load. Check index.html.'
+            );
+        }
+
+        return () => {
+            clearTimeout(timer);
+
+            if ($carousel?.hasClass('owl-loaded')) {
+                $carousel.trigger('destroy.owl.carousel');
+            }
+        };
+    }, []);
+
+
     return (
         <div>
             {/* Spinner Start */}
 
-            {/* <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-                <div className="spinner-border text-primary" style={{ width: '3rem', height: '3rem' }} role="status">
-                    <span className="sr-only">Loading...</span>
+
+            {loading && (
+                <div
+                    id="spinner"
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        width: '100vw',
+                        height: '100vh',
+                        backgroundColor: '#ffffff',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 2147483647
+                    }}
+                >
+                    <div
+                        style={{
+                            width: '48px',
+                            height: '48px',
+                            border: '5px solid #dee2e6',
+                            borderTop: '5px solid #06BBCC',
+                            borderRadius: '50%',
+                            animation: 'loader-spin 0.8s linear infinite'
+                        }}
+                    />
+                    <style>
+                        {`
+                @keyframes loader-spin {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+            `}
+                    </style>
                 </div>
-            </div> */}
+            )}
+
             {/* Spinner End */}
             {/* Navbar Start */}
             <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
@@ -78,7 +166,7 @@ function Home_header() {
                 </div>
             </div>
             {/* Carousel End */}
-          
+
         </div>
 
     )
